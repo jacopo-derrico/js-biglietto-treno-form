@@ -74,3 +74,7 @@ button{
 #final-ticket p{
     margin-top: 15px;
 }
+
+#ticket{
+    display: none;
+}

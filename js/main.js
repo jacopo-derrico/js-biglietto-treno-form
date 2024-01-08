@@ -35,6 +35,8 @@ function ticketPrice() {
     document.getElementById('cp-code').innerHTML = codeCP(10000, 99999)
 
     document.getElementById('passenger-name').innerHTML = name.value
+
+    document.getElementById('ticket').style.display = 'block'
 }
 
 function refreshPage() {
