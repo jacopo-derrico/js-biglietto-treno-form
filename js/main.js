@@ -8,13 +8,30 @@ let ageSpan = document.getElementById('age-span')
 
 calculate.addEventListener('click', ticketPrice)
 
+function vagonNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function codeCP (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function ticketPrice() {
     if (ageSpan.value == 'minorenne') {
-        document.getElementById("ticket").innerHTML = ((tripLength.value * kmPrice) * 0.8).toFixed(2);
+        document.getElementById("ticket-price").innerHTML = ((tripLength.value * kmPrice) * 0.8).toFixed(2) + "€";
+        document.getElementById('offer').innerHTML = "Biglietto Ridotto"
     } else if (ageSpan.value == 'over-65') {
-        document.getElementById("ticket").innerHTML = ((tripLength.value * kmPrice) * 0.6).toFixed(2);
+        document.getElementById("ticket-price").innerHTML = ((tripLength.value * kmPrice) * 0.6).toFixed(2) + "€";
+        document.getElementById('offer').innerHTML = "Biglietto Senior"
     }
     else {
-        document.getElementById("ticket").innerHTML = (tripLength.value * kmPrice).toFixed(2);
+        document.getElementById("ticket-price").innerHTML = (tripLength.value * kmPrice).toFixed(2) + "€";
+        document.getElementById('offer').innerHTML = "Biglietto Standard"
     }
+
+    document.getElementById('vagon').innerHTML = vagonNumber(1,9)
+
+    document.getElementById('cp-code').innerHTML = codeCP(10000,99999)
+
+    document.getElementById('passenger-name').innerHTML = name.value
 }
