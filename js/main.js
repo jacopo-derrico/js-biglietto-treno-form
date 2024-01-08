@@ -1,5 +1,6 @@
 const kmPrice = .21
 const calculate = document.getElementById('calculate')
+const cancel = document.getElementById('cancel')
 
 let name = document.getElementById('name')
 let tripLength = document.getElementById('km')
@@ -12,7 +13,7 @@ function vagonNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function codeCP (min, max) {
+function codeCP(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -29,9 +30,16 @@ function ticketPrice() {
         document.getElementById('offer').innerHTML = "Biglietto Standard"
     }
 
-    document.getElementById('vagon').innerHTML = vagonNumber(1,9)
+    document.getElementById('vagon').innerHTML = vagonNumber(1, 9)
 
-    document.getElementById('cp-code').innerHTML = codeCP(10000,99999)
+    document.getElementById('cp-code').innerHTML = codeCP(10000, 99999)
 
     document.getElementById('passenger-name').innerHTML = name.value
 }
+
+function refreshPage() {
+    window.location.reload();
+}
+
+cancel.addEventListener('click', refreshPage)
+
