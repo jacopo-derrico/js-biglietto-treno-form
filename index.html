@@ -5,27 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcola biglietto del treno</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <main id="main" class="container">
+        <div class="row">
+            <h2>calcola il prezzo del tuo biglietto</h2>
 
-    <form>
-        <label for="name">Nome Cognome</label>
-        <input id="name" name="name" type="text" placeholder="Come ti chiami?">
-        <label for="km">Km da percorrere</label>
-        <input id="km" name="km" type="text" placeholder="Quanti chilometri?">
-        <label for="age-span">Fascia d'età</label>
-        <select name="age-span" id="age-span">
-            <option value="minorenne">Minorenne</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="over-65">Over 65</option>
-        </select>
-        <button type="button" id="calculate">Calcola</button>
-    </form>
+            <form class="flex white-block">
+                <div class="flex">
+                    <div>
+                        <label for="name">Nome Cognome</label>
+                        <input id="name" name="name" type="text" placeholder="Come ti chiami?">
+                    </div>
+                    <div>
+                        <label for="km">Km da percorrere</label>
+                        <input id="km" name="km" type="text" placeholder="Quanti chilometri?">
+                    </div>
+                    <div>
+                        <label for="age-span">Fascia d'età</label>
+                        <select name="age-span" id="age-span">
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over-65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex" id="buttons">
+                    <button type="button" id="calculate">Calcola</button>
+                    <button type="button" id="cancel">Annulla</button>
+                </div>
+            </form>
+        </div>
 
-    <div id="ticket">
 
-    </div>
+        <div id="ticket" class="row">
+            <h2>il tuo biglietto</h2>
+        </div>
+    </main>
 
     <script src="./js/main.js"></script>
 </body>
