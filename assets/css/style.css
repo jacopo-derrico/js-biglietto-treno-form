@@ -22,6 +22,10 @@ h2 {
     margin-bottom: 40px;
 }
 
+h3, .name{
+    text-transform: uppercase;
+}
+
 .row{
     display: flex;
     flex-direction: column;
@@ -52,4 +56,17 @@ button{
     border: 2px solid #B91550;
     border-radius: 5px;
     background-color: white;
+}
+
+#final-ticket{
+    border: 1px solid black;
+    border-right: none;
+}
+
+#final-ticket div:first-child{
+    background-color: grey;
+}
+
+#final-ticket div{
+    padding: 15px;
 }
