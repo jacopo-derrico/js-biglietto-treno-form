@@ -2,7 +2,7 @@ const kmPrice = .21
 const calculate = document.getElementById('calculate')
 const cancel = document.getElementById('cancel')
 
-let name = document.getElementById('name')
+let nameSurname = document.getElementById('name')
 let tripLength = document.getElementById('km')
 let ageSpan = document.getElementById('age-span')
 
@@ -34,7 +34,7 @@ function ticketPrice() {
 
     document.getElementById('cp-code').innerHTML = codeCP(10000, 99999)
 
-    document.getElementById('passenger-name').innerHTML = name.value
+    document.getElementById('passenger-name').innerHTML = nameSurname.value
 
     document.getElementById('ticket').style.display = 'block'
 }
